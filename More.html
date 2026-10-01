@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="dastyles.css">
+</head>
+<body>
+    <button class="hamburger" id="hamburger">
+        ☰
+    </button>
+
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbutton">About</a>
+
+            <div class="dropdown-content">
+                <a href="Founder.html">The Band</a>
+                <a href="Company.html">About Us</a>
+                <a href="More.html">More</a>
+            </div>
+        </li>
+
+        <li>
+            <a href="Contact.html">Contact</a>
+        </li>
+
+        <li>
+            <a href="Adress.html">Address</a>
+        </li>
+
+        <li>
+            <a href="More.html" class="active">More</a>
+        </li>
+    </ul>
+
+    <p>
+        SUMMER is constantly writing, recording, and looking toward what's next.
+The band is currently working on new material while continuing to develop its live show and connect with listeners in new places.
+Every new song is another step forward.
+<br>
+<br>
+Every show is another memory.
+Every listener becomes another part of the SUMMER story.
+The band's ambition is simple: keep creating music that feels honest, keep playing shows that people remember, and keep building a community around the songs.
+
+    </p>
+
+    <script>
+
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.querySelector("ul");
+        
+        hamburger.addEventListener("click", function () {
+            nav.classList.toggle("mobile-menu");
+        });
+        
+        const dropdown = document.querySelector(".dropdown");
+        const dropButton = document.querySelector(".dropbutton");
+        
+        dropButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            dropdown.classList.toggle("open");
+        });
+        
+        </script>
+        
+        </body>
+        </html>
+</body>
+</html>
